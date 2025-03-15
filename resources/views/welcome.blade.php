@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Hello live wire</h1>
-    {{-- <livewire:students-count/> --}}
+    <livewire:students-count/>
     {{-- <div>
         
         <livewire:send-event/>
@@ -18,10 +18,10 @@
         <livewire:receive-event/>
     </div> --}}
 
-    <div>
+    {{-- <div>
         
         <livewire:lazy-loading lazy />
         
-    </div>
+    </div> --}}
 </body>
 </html>

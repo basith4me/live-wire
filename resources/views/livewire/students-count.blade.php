@@ -16,10 +16,14 @@
 
     @endif
 
-    <div>
+   
         @foreach ($entries as $item)
-            <p>{{ $item->count }}</p>
-            <p>{{ $item->descreption }}</p>
-        @endforeach
-    </div>
+        <div wire:key='{{ $item->id }}' wire:wire:transition style="margin: 0">
+            <div><p>{{ $item->count }}</p></div>
+            <div><p>{{ $item->descreption }}</p></div>
+            <button wire:click='deleteStudent({{$item->id}})'>Delete</button>
+           
+        </div>
+            @endforeach
+  
 </div>
