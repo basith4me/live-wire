@@ -9,13 +9,19 @@
 <body>
     <h1>Hello live wire</h1>
     {{-- <livewire:students-count/> --}}
-    <div>
+    {{-- <div>
         
         <livewire:send-event/>
     </div>
     <div>
         
         <livewire:receive-event/>
+    </div> --}}
+
+    <div>
+        
+        <livewire:lazy-loading lazy />
+        
     </div>
 </body>
 </html>
