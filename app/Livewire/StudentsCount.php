@@ -24,7 +24,10 @@ class StudentsCount extends Component
         ]);
         $this->reset();
 
-
+    }
+    public function deleteStudent($id)
+    {
+        Student::find($id)->delete();
     }
     public function render()
     {
