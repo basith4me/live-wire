@@ -8,6 +8,14 @@
 </head>
 <body>
     <h1>Hello live wire</h1>
-    <livewire:students-count/>
+    {{-- <livewire:students-count/> --}}
+    <div>
+        
+        <livewire:send-event/>
+    </div>
+    <div>
+        
+        <livewire:receive-event/>
+    </div>
 </body>
 </html>

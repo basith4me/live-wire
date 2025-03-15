@@ -3,22 +3,33 @@
 namespace App\Livewire;
 
 use App\Models\Student;
+use Livewire\Attributes\Validate;
 use Livewire\Component;
 
 class StudentsCount extends Component
 {
-    public $studentCount;
-    public $note;
+    #[Validate('required|integer')]
+    public int $studentCount;
 
-    public function submit () {
+    #[Validate('required|string')]
+    public string $note;
+
+    public function submit()
+    {
+        $this->validate();
+
         Student::create([
             'count' => $this->studentCount,
             'descreption' => $this->note,
         ]);
         $this->reset();
+
+
     }
     public function render()
     {
-        return view('livewire.students-count');
+        return view('livewire.students-count', [
+            'entries' => Student::all(),
+        ]);
     }
 }
